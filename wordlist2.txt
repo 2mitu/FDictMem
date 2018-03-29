@@ -1,0 +1,19 @@
+4	youth
+-3	youth club
+0	youth hostel
+4	youthful
+-3	youthfully
+0	youthfulness
+4	yowl
+-3	yr
+0	yrs
+4	YTS
+-3	yucca
+0	yuck
+4	yucky
+-3	yule
+0	yule-log
+4	yum-yum
+-3	yummy
+0	yuppie
+4	YWCA

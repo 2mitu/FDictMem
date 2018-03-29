@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:autofit="http://schemas.android.com/tools"
+    android:background="@android:color/darker_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <Button
+        android:id="@+id/reset_level"
+        android:layout_marginLeft="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/reset_level"
+        android:textAllCaps="false"
+        android:layout_marginStart="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/item_list"
+        app:layout_constraintBottom_toTopOf="@id/chose_level"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <Spinner
+        android:id="@+id/item_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:freezesText="true"
+        android:defaultFocusHighlightEnabled="true"
+        app:layout_constraintLeft_toRightOf="@id/reset_level"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/reset_level"
+        app:layout_constraintTop_toTopOf="@id/reset_level" />
+
+    <RadioGroup
+        android:id="@+id/chose_level"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:checkedButton="@id/item_tough"
+        android:textSize="20sp"
+        android:freezesText="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/item_level"
+        app:layout_constraintTop_toBottomOf="@+id/reset_level"
+        app:layout_constraintBottom_toTopOf="@id/item_view"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintHorizontal_weight="3" >
+
+        <RadioButton
+            android:id="@+id/item_tough"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/item_tough" />
+
+        <RadioButton
+            android:id="@+id/item_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/item_all" />
+
+        <RadioButton
+            android:id="@+id/item_easy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/item_easy" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/item_level"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:text="@string/item_level"
+        android:freezesText="true"
+        app:layout_constraintTop_toTopOf="@+id/chose_level"
+        app:layout_constraintBottom_toBottomOf="@+id/chose_level"
+        app:layout_constraintLeft_toRightOf="@+id/chose_level"
+        app:layout_constraintRight_toLeftOf="@+id/progress"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <TextView
+        android:id="@+id/progress"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:layout_marginRight="5dp"
+        android:textSize="20sp"
+        android:text="@string/progress"
+        android:layout_marginEnd="5dp"
+        android:freezesText="true"
+        app:layout_constraintTop_toTopOf="@+id/chose_level"
+        app:layout_constraintBottom_toBottomOf="@+id/chose_level"
+        app:layout_constraintLeft_toRightOf="@+id/item_level"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <me.grantland.widget.AutofitTextView
+        android:id="@+id/item_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:textSize="80sp"
+        android:singleLine="true"
+        android:maxLines="1"
+        autofit:minTextSize="16sp"
+        android:text="@string/item_view"
+        android:freezesText="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/chose_level"
+        app:layout_constraintBottom_toTopOf="@id/show_me"
+        app:layout_constraintVertical_weight="3" />
+
+    <Button
+        android:id="@+id/show_me"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="@string/show_me"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@id/explanation_view"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/verify"
+        app:layout_constraintTop_toBottomOf="@id/item_view"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <CheckBox
+        android:id="@+id/verify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:freezesText="true"
+        app:layout_constraintLeft_toRightOf="@id/show_me"
+        app:layout_constraintRight_toLeftOf="@id/already_know"
+        app:layout_constraintBottom_toBottomOf="@id/show_me"
+        app:layout_constraintTop_toTopOf="@id/show_me"
+        android:text="@string/verify" />
+
+    <Button
+        android:id="@+id/already_know"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/already_know"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/show_me"
+        app:layout_constraintLeft_toRightOf="@id/verify"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/show_me"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <TextView
+        android:id="@+id/explanation_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:singleLine="false"
+        android:text="Explanation\nLine2\nLine3\nLine4\nLine5"
+        android:textSize="20sp"
+        android:freezesText="true"
+        android:textAlignment="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/show_me"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_weight="7" />
+
+</android.support.constraint.ConstraintLayout>

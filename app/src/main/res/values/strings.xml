@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">uKnow?</string>
+    <string name="title_home">Search</string>
+    <string name="title_dashboard">History</string>
+    <string name="title_notifications">Memory</string>
+    <string name="search_hint">Input word here ...</string>
+    <string name="progress">xx/yy</string>
+    <string name="reset_level">Reset</string>
+    <string name="item_tough">Tough</string>
+    <string name="item_all">All</string>
+    <string name="item_easy">Easy</string>
+    <string name="item_level">L?</string>
+    <string name="item_view">Item name</string>
+    <string name="explanation_view">Explanation of the item\nwill  be shown here.</string>
+    <string name="already_know">I Know</string>
+    <string name="verify">NoCHN</string>
+    <string name="show_me">Show Me</string>
+    <string name="history_save">Save &amp; Clear</string>
+    <string name="select_all">All</string>
+    <string name="select_reverse">Reverse</string>
+    <string name="select_clear">Clear</string>
+    <string name="select_delete">Delete</string>
+    <string name="history_select"></string>
+    <string name="starts_with">abc*</string>
+    <string name="ends_with">*abc</string>
+    <string name="contains">*abc*</string>
+    <string name="inner_it">+abc+</string>
+    <string name="about">About</string>
+    <string name="dict_oxford">Oxford</string>
+    <string name="dict_langdao">Langdao</string>
+    <string name="history_title">You searched:</string>
+    <string name="color_a">墨绿/赭石</string>
+    <string name="color_b">深棕/土黄</string>
+    <string name="color_c">暗绿/灰绿</string>
+    <string name="color_d">浅蓝/暗灰</string>
+    <string name="color_e">赤金/暗黑</string>
+ </resources>

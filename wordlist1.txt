@@ -1,0 +1,57 @@
+12	zanily
+-3	zaniness
+0	zany
+12	zap
+-3	zappy
+0	zeal
+12	zealot
+-3	zealotry
+0	zealous
+12	zealously
+-3	zebra
+0	zebra crossing
+12	zed
+-3	Zeitgeist
+0	Zen
+12	zenith
+-3	zephyr
+0	Zeppelin
+12	zero
+-3	zero growth
+0	zero-hour
+12	zero-rated
+-3	zest
+0	zestful
+12	zestfully
+-3	zigzag
+0	zillion
+12	zinc
+-3	zing
+0	Zion
+12	Zionism
+-3	Zionist
+0	zip
+12	Zip code
+-3	zippy
+0	zircon
+12	zither
+-3	zodiac
+0	zodiacal
+12	zombie
+-3	zonal
+0	zone
+12	zoning
+-3	zonked
+0	zoo
+12	zoo-
+-3	zoo-keeper
+0	zoological
+12	zoological gardens
+-3	zoologically
+0	zoologist
+12	zoology
+-3	zoom
+0	zoom lens
+12	zoophyte
+-3	zucchini
+-3	Zulu
