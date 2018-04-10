@@ -259,24 +259,13 @@ public class MainActivity extends AppCompatActivity
     public boolean onKeyDown(int keyCode, KeyEvent event) {
 
         if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
-
-            exit();
-            return true;
+            if ((System.currentTimeMillis() - mExitTime) > 2000) {
+                Toast.makeText(MainActivity.this, "再按一次退出", Toast.LENGTH_SHORT).show();
+                mExitTime = System.currentTimeMillis();
+                return true;
+            }
         }
         return super.onKeyDown(keyCode, event);
-    }
-
-    public void exit() {
-        if ((System.currentTimeMillis() - mExitTime) > 2000) {
-            Toast.makeText(MainActivity.this, "再按一次退出", Toast.LENGTH_SHORT).show();
-            mExitTime = System.currentTimeMillis();
-        } else {
-            loadTask0.cancel(true);
-            loadTask1.cancel(true);
-            finish();
-            Log.d(TAG,"exit...");
-            System.exit(0);
-        }
     }
 
     @Override
