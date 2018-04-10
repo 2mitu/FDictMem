@@ -23,8 +23,9 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Calendar;
 import java.lang.NullPointerException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 
 /**
@@ -236,18 +237,13 @@ public class FSearchHistory extends Fragment {
         }
     }
 
-    private void saveHistoryToWordList() {
+    public void saveHistoryToWordList() {
         Log.d(TAG,"saveHistoryToWordList...");
         FileOutputStream fout;
         String itemStr;
         String fileName = Environment.getExternalStorageDirectory().toString() + wordListDir;
-        Calendar now = Calendar.getInstance();
-        String nowStr = String.format("%04d",now.get(Calendar.YEAR)) + "-";
-        nowStr += String.format("%02d",now.get(Calendar.MONTH)) + "-";
-        nowStr += String.format("%02d",now.get(Calendar.DAY_OF_MONTH)) + "_";
-        nowStr += String.format("%02d",now.get(Calendar.HOUR_OF_DAY)) + "_";
-        nowStr += String.format("%02d",now.get(Calendar.MINUTE)) + "_";
-        nowStr += String.format("%02d",now.get(Calendar.SECOND));
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH_mm_ss");
+        String nowStr=format.format(new Date());
         fileName += nowStr + ".txt";
         try{
             fout = new FileOutputStream(fileName);
